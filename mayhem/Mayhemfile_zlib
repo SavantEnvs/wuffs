@@ -1,0 +1,9 @@
+project: savantenvs/wuffs
+target: zlib
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/zlib/testsuite
+cmds:
+  - cmd: /mayhem/zlib
+    libfuzzer: true
+    timeout: 5

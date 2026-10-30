@@ -1,0 +1,9 @@
+project: savantenvs/wuffs
+target: bmp
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/bmp/testsuite
+cmds:
+  - cmd: /mayhem/bmp
+    libfuzzer: true
+    timeout: 5
