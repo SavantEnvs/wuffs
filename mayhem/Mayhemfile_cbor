@@ -1,0 +1,9 @@
+project: savantenvs/wuffs
+target: cbor
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/cbor/testsuite
+cmds:
+  - cmd: /mayhem/cbor
+    libfuzzer: true
+    timeout: 5

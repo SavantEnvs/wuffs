@@ -1,0 +1,9 @@
+project: savantenvs/wuffs
+target: pixel_swizzler
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/pixel_swizzler/testsuite
+cmds:
+  - cmd: /mayhem/pixel_swizzler
+    libfuzzer: true
+    timeout: 5
