@@ -1,0 +1,9 @@
+project: savantenvs/wuffs
+target: png
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/png/testsuite
+cmds:
+  - cmd: /mayhem/png
+    libfuzzer: true
+    timeout: 5

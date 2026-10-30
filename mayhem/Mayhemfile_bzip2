@@ -1,0 +1,9 @@
+project: savantenvs/wuffs
+target: bzip2
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/bzip2/testsuite
+cmds:
+  - cmd: /mayhem/bzip2
+    libfuzzer: true
+    timeout: 5
